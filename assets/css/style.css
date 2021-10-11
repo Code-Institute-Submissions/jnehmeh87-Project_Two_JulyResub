@@ -58,7 +58,22 @@ h1, h2 {
 
 
 
+/* Games rules text design */
 
+#rules {
+    font-size: 150%;
+    background-color: rgba(92, 182, 65, 0.904);
+    height: 1000px;
+    position: center;
+    clear: both;
+}
+
+.rules-text {
+    font-weight: bold;
+    padding-top: 15%;
+    padding-left: 30%;
+    position: center center;
+}
 
 
 /* last section sign up link button */
