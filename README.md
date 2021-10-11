@@ -1,108 +1,118 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Portfolio Project 1 - Street Photography
+## Purpose
 
-Welcome jnehmeh87,
+Website for street photography course around Stockholm streets. Providing information, a gallery and a sign up page. 
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+This Website was created for the purpose of completing the Portfolio 1 project for the Code Institute's Full Stack Developer course and is entirely fictional.
+The project covers HTML and CSS with a user centric approach in mind.  A full list of technologies used can be found in the technologies section of this document. Note that GitHub as of March 2021 automatically creates a Table of Contents for the README file.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The live website can be found [here](https://jnehmeh87.github.io/project_one/)
 
-## Gitpod Reminders
+## Street Photography Responsive Website
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+![Website Mock Up](assets/images/am-i.png)
 
-`python3 -m http.server`
+*** 
+## User Experience (UX)
 
-A blue button should appear to click: _Make Public_,
+### User stories
 
-Another blue button should appear to click: _Open Browser_.
+#### First Time Visitor Goals
+* As a First Time user, I want to understand the main purpose of the site at a glance and learn more about the course and its benefits.
+* As a First Time user, I want to check some photos taken by the mentor of this course.
+* As a First Time user, I want to view the website and content clearly on different size devices.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#### Returning Visitor Goals
+* As a Returning user, I want to be able to book a course or sign up.
 
-A blue button should appear to click: _Make Public_,
+#### Frequent Visitor Goals
+* As a Frequent user, I want to check if there are added content to the gallery page and check new dates updated regularly
 
-Another blue button should appear to click: _Open Browser_.
+### Design
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+#### Color Scheme
+The Index page contains a start image sided with a circle with some convincing infortiom about the course. The color scheme consists of 2 colors rgba(34, 26, 107, 0.856) and rgba(153, 144, 235, 0.7).
 
-To log into the Heroku toolbelt CLI:
+#### Imagery
+Images on index page and gallery page are meant to provide results of quality of pictures and to inspire the user to sign up.	
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Typography
+Tajawal and Montserrat from Google Fonts are used, with Sans Serif as fallback font.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Differences to Design
+* The Sign up button on index page send us to the for where the user provide their contact info and choose their level of expertise. 
+* Icons from font awesome were added to the footer, form and time section, this displayed more visually pleasing, while maintaining the visual cue for expected form contents.
+* Header was split in 2 rows for mobile devices to keep visual integrity and readibility of header and navbar.
 
-------
+### Structure 
+* The Home page follows a Z-shape design with the start image and a circle shape About the course on top and then sections about description and price, finishing with a button linking to the Sign up sheet.
+* The Courses page displays overview information availabe without scrolling. Page links as well as scrolling enables expanded information further down on the page.
+* The gallery page displays images.
+* The Sign up page has a form to submit.
 
-## Release History
+No submenues are used and the navbar indicates to the user where they are at all times. THe Home page and courses page has direct links to the call to action - i.e. the book page.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Wireframes
+Wireframes are sketched by hand and can be viewed here - [View](wireframes/wireframes.jpg)
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+## Features
+* Internal links (within sheet and between sheets) - both in nav bar and on the sheets
+* External links (social media)
+* Sign up form 
+* Images
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Future features
+* A booking form sending the data to the business owner - current form uses form method get and clears the form upon submit.
+* More courses and pages of behind the scene
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Technologies
+### Languages used
+* HTML5
+	* This project uses HTML5 as the main language for content and structure of the Website.
+* CSS3
+	* This project uses CSS3 for Website styling
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+### Frameworks, Libraries & Programs used
+* [Font Awesome](https://fontawesome.com/)
+	* Font awesome Icons are used 
+* [Google Fonts](https://fonts.google.com/)
+	* Google fonts are used throughout the project to import the relevant fonts
+* [GitHub](https://github.com/)
+	* GithHub is the hosting site used to store the source code for the Website and [Git Pages](https://pages.github.com/) is used for the deployment of the live site.
+* [GitPod](https://gitpod.io/)
+	* GitPod is used as version control software to commit and push code to the GitHub repository where the source code is stored.
+* [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools)
+	* Google chromes built in developer tools are used to inspect page elements and help debug issues with the site layout and test different CSS styles.
+* [Am I Responsive?](http://ami.responsivedesign.is/)
+	* Used to generate the screenshots for responsive design.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+## Testing
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+### Validation
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project. All pages of the final website passed validation without errors.
+-   [W3C Markup Validator for index](assets/images/w3c-index.png)
+-	[W3C Markup Validator for gallery](assets/images/w3c-gallery.png)
+-	[W3C Markup Validator for signup](assets/images/w3c-signup.png)
+-   [W3C CSS Validator](assets/images/w3c-css.png) 
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+### Bugs
+* The about div disappear to low screen sizes under 1380px.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+## Deployment
+### GitHub Pages
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The project was deployed to GitHub Pages through the below steps:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/jnehmeh87/project_one)
+2. Click the "Setting" button "Settings" Button.
+3. In the left menu, scroll down to "Pages".
+4. Under "Source", click the dropdown and select "Branch: main/master", then click "Save".
+5. Once deployed, the now published site [link](https://jnehmeh87.github.io/project_one/) is found in the "Pages" section.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+## Credits
+### Images
+* All images on this site are my own.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+### Acknowledgements
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+-   To my Mentor [Chris Quinn](https://github.com/10xOXR) the best tutor I received in years. Very helpful and pushing me to be best. Definitly recommend for all.
