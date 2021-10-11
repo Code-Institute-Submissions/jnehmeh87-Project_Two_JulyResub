@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A game about testing your Knowledge about fruits.">
+    <meta name="keywords" content="fruits, Knowledge, game, smartgames, gamesoffruits">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Fruits Knowledge Game</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <h1 id="logo">
+                Fruits Knowledge
+            </h1>
+        </a>
+        <nav>
+            <ul id="menu">
+                <li>
+                    <a href="scores.html" class="active">High Scores</a>
+                </li>
+                <li>
+                    <a href="gamerules.html">Game Rules</a>
+                </li>
+                <li>
+                    <a href="index.html">Play Me!</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="form-section">
+        <form method="POST" action="https://formdump.codeinstitute.net/" class="signup-form">
+            <h2>Let's get you signed up! <i class="fas fa-camera-retro"></i></h2>
+            <label for="fname">First Name</label>
+            <input id="fname" name="first_name" type="text" required class="text-input">
+            
+            <label for="lname">Last Name</label>
+            <input id="lname" name="last_name" type="text" required class="text-input">
+
+            <label for="telephone">Telephone</label>
+            <input type="text" id="telephone" name="telephone" required class="text-input">
+            
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email_address" required class="text-input">
+            
+            <label for="beginner" class="level">Beginner</label>
+            <input type="radio" id="beginner" name="knowledge_level" value="beginner" required>
+            <label for="intermediate" class="level">Intermediate</label>
+            <input type="radio" id="intermediate" name="knowledge_level" value="intermediate" required>
+            <label for="pro" class="level">Professional</label>
+            <input type="radio" id="pro" name="knowledge_level" value="pro" required>
+            
+            <input class="join-button" type="submit" value="Sign Up!">
+        </form>
+    </section>
+
+    <footer>
+        <ul class="social-networks">
+            <li>
+                <a href="https://facebook.com/jnehmeh" target="_blank" rel="noopener" aria-label="Visit our Facebook page (Opens in a new tab)"><i class="fab fa-facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://linkedin.com/in/jnehmeh" target="_blank" rel="noopener" aria-label="Visit our linkedin page (Opens in a new tab)"><i class="fab fa-linkedin"></i> </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/c/JadNehmeh" target="_blank" rel="noopener" aria-label="Visit our Youtube page (Opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com/jnehmeh87" target="_blank" rel="noopener" aria-label="Visit our Instagram page (Opens in a new tab)"><i class="fab fa-instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/4a37176526.js" crossorigin="anonymous"></script>
+</body>
+</html>
