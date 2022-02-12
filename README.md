@@ -98,7 +98,7 @@ The project was deployed to GitHub Pages through the below steps:
 
 ## Credits
 ### Images
-* 
+*  https://www.worldometers.info/geography/flags-of-the-world/
 
 ### Acknowledgements
 
