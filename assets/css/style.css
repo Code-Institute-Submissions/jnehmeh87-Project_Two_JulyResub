@@ -68,11 +68,28 @@ h1, h2 {
     clear: both;
 }
 
-.rules-text {
+
+.rules-title {
+    max-height: fit-content;
+    max-width: fit-content;
+    font-size: 200%;
     font-weight: bold;
-    padding-top: 15%;
-    padding-left: 30%;
-    position: center center;
+    padding-left: 4%;
+    padding-top: 8%;
+    position: static;
+}
+
+.rules-text {
+    max-height: fit-content;
+    max-width: fit-content;
+    font-weight: bold;
+    margin: 1em;
+    margin-left: 2em;
+    padding: 2%;
+    position: static;
+    border: 3mm ridge rgb(76, 145, 55);
+    border-radius: 10px;
+    background-color: rgba(180, 212, 170, 0.904);
 }
 
 
