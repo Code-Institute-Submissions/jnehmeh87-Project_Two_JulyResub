@@ -138,6 +138,17 @@ h1, h2 {
     color:rgba(38, 94, 21, 0.7);
 }
 
+/* Quiz section */
+
+#quiz {
+    font-size: 100%;
+    background-color: rgba(92, 182, 65, 0.904);
+    height: 490px;
+    width: 100%;
+    position: relative;
+    clear: both;
+}
+
 /* Footer  */
 
 footer {

@@ -682,6 +682,7 @@ let questions = [
     {
         "image": "assets/images/uruguay.gif",
         "answer": "uruguay"
+    },
     {
         "image": "assets/images/us.gif",
         "answer": "us"
@@ -707,3 +708,24 @@ let questions = [
         "answer": "zimbabwe"
     }
 ];
+let questionSpan = document.getElementById("question");
+let answerSpan = document.getElementById("answer");
+const answ
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    getQuestion()
+})
+
+function getQuestion() {
+    for (let question in questions) {
+        question = document.getElementById("question");
+        document.append("question")
+
+    }
+}
+
+function checkAnswer() {
+
+}
+
