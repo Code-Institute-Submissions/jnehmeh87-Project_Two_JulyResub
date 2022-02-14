@@ -710,19 +710,35 @@ let questions = [
 ];
 let questionSpan = document.getElementById("question");
 let answerSpan = document.getElementById("answer");
-const answ
+
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    getQuestion()
+    getQuestion();
 })
 
 function getQuestion() {
-    for (let question in questions) {
-        question = document.getElementById("question");
-        document.append("question")
+    for (let image in questions){
+        function addImage(){
+            var src = "image";
+            showImage("image", 300,300, "Questionary");
+        }
 
+        function showImage(src, width, height, alt){
+            var img = document.createElement("img");
+            img.src = src;
+            img.width = width;
+            img.height = height;
+            img.alt = alt;
+            document.body.appendChild(img);
+        }
     }
+
+}
+
+
+function newFunction() {
+    ;
 }
 
 function checkAnswer() {

@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     border: none;
+    box-sizing: border-box;
 }
 
 body {
@@ -143,10 +144,26 @@ h1, h2 {
 #quiz {
     font-size: 100%;
     background-color: rgba(92, 182, 65, 0.904);
-    height: 490px;
+    height: 780px;
     width: 100%;
     position: relative;
     clear: both;
+}
+
+.questionary {
+    margin: 30px auto;
+    margin-top: 20px;
+    border: 3px solid white;
+    border-radius: 3px;
+    width: 500px;
+    color: white;
+    font-size: 100%;
+    padding: 10px;
+    text-align: center;
+}
+
+.answerChoices {
+    text-align: left;
 }
 
 /* Footer  */
