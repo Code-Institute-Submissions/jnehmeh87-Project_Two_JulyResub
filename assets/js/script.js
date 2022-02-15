@@ -708,40 +708,9 @@ let questions = [
         "answer": "zimbabwe"
     }
 ];
-let questionSpan = document.getElementById("question");
+
+let imageSpan = document.getElementById("image");
 let answerSpan = document.getElementById("answer");
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    getQuestion();
-})
-
-function getQuestion() {
-    for (let image in questions){
-        function addImage(){
-            var src = "image";
-            showImage("image", 300,300, "Questionary");
-        }
-
-        function showImage(src, width, height, alt){
-            var img = document.createElement("img");
-            img.src = src;
-            img.width = width;
-            img.height = height;
-            img.alt = alt;
-            document.body.appendChild(img);
-        }
-    }
-
-}
-
-
-function newFunction() {
-    ;
-}
-
-function checkAnswer() {
-
-}
-
+let aAnswer = document.getElementById("a");
+let bAnswer = document.getElementById("b");
+let cAnswer = document.getElementById("c");

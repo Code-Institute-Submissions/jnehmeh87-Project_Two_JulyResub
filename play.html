@@ -32,29 +32,26 @@
         </nav>
     </header>
 
-    <section id="quiz">
-        <div class="questionary">
-            <h1><i class="fa-solid fa-flag"></i> Choose the correct answer:</h1>
-            <span id="question"><button onclick="getQuestion();">START!</button></span>
-            <span id="answer">
-                <ul class="answerChoices">
-                    <li><i class="fa-light fa-flag"></i>
-                        <input type="radio" name="answer" id="a" class="answer-1">
-                        <label for="a" id="a">sgfgsfg</label>
-                    </li>
-                    <li><i class="fa-light fa-flag"></i>
-                        <input type="radio" name="answer" id="b" class="answer-2">
-                        <label for="b" id="b">fgfgsg</label>
-                    </li>
-                    <li><i class="fa-light fa-flag"></i>
-                        <input type="radio" name="answer" id="c" class="answer-2">
-                        <label for="c" id="c">sfggsgsf</label>
-                    </li>
-                </ul>
-            </span>
+    <section id="play">
+        <h1><i class="fa-solid fa-flag"></i> Choose the correct answer:</h1>
+        <div id="quiz">
+            <div id="image"><img src="/assets/images/lebanon.gif" alt="Lebanon flag" class="image-style"></div>
+            <div id="answer">
+                <div>
+                    <button id="a" type="submit" class="answer-button">Answer 1</button>
+                </div>
+                <div>
+                    <button id="b" type="submit" class="answer-button">Answer 2</button>
+                </div>
+                <div>
+                    <button id="c" type="submit" class="answer-button">Answer 3</button>
+                </div>
+            </div>
         </div>
         <div id="score">
-            
+            <div id="win-label" class="badge">Win</div>
+            <div id="loss-label" class="badge">Loss</div>
+            <span id="win-score">0</span> | <span id="loss-score">0</span>
         </div>
     </section>    
 
