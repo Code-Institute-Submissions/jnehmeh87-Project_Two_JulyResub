@@ -185,9 +185,23 @@ console.log('Answer ', answer);
 let entries = Object.entries(questions);
 console.log('Entries ', entries);
 
-function changeFlag(){
-    let imageDiv = document.getElementById('image');
-    for (let i = 0 ; i < 177 ; i++){
-        imageDiv.src = entries[0][0];
-    };
-}
+let imageDiv = document.getElementById('image');
+let aButton = document.getElementById('a')
+let bButton = document.getElementById('b')
+let cButton = document.getElementById('c')
+let index = 0
+
+aButton.addEventListener("click", function() {
+    imageDiv.src = keys[index];
+    index = (index === keys.length -1) ? 0 : index + 1;
+})
+
+bButton.addEventListener("click", function() {
+    imageDiv.src = keys[index];
+    index = (index === keys.length -1) ? 0 : index + 1;
+})
+
+cButton.addEventListener("click", function() {
+    imageDiv.src = keys[index];
+    index = (index === keys.length -1) ? 0 : index + 1;
+})
