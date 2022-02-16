@@ -204,6 +204,8 @@ h1, h2 {
 
 #image {
     margin: 30px;
+    width: 407px;
+    height: 274px;
 }
 
 #answer {
@@ -214,10 +216,11 @@ h1, h2 {
 }
 
 .answer-button {
-    color: rgba(24, 59, 14, 0.767);
-    font-size: 25px;
+    color: rgb(24, 59, 14);
+    font-size: 18px;
     margin: 20px;
     padding: 8px;
+    width: 200px;
     border: 1mm ridge rgba(165, 235, 144, 0.7);
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;

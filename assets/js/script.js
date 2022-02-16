@@ -180,7 +180,7 @@ let questions = {
 
 let keys = Object.keys(questions);
 console.log('keys ',keys);
-let answer = Object.values(questions);
+let vals = Object.values(questions);
 console.log('Answer ', answer);
 let entries = Object.entries(questions);
 console.log('Entries ', entries);
@@ -190,6 +190,7 @@ let aButton = document.getElementById('a')
 let bButton = document.getElementById('b')
 let cButton = document.getElementById('c')
 let index = 0
+let count = 0
 
 aButton.addEventListener("click", function() {
     imageDiv.src = keys[index];
@@ -205,3 +206,30 @@ cButton.addEventListener("click", function() {
     imageDiv.src = keys[index];
     index = (index === keys.length -1) ? 0 : index + 1;
 })
+
+function shuffle(vals) {
+    let currentIndex = vals.length, randomIndex;
+    while (currentIndex != 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex--;
+        [vals[currentIndex], vals[randomIndex]] = [
+            vals[randomIndex], vals[currentIndex]];
+    }
+    return vals;
+}
+
+function changeButton1() {
+    aButton.value = vals[index];
+    index = (index === vals.length -1) ? 0 : index + 1;
+    shuffle(vals);
+}
+
+function changeButton2() {
+    bButton.value = vals[index];
+    index = (index === vals.length -1) ? 0 : index + 1;
+}
+
+function changeButton3() {
+    cButton.value = vals[index];
+    index = (index === vals.length -1) ? 0 : index + 1;
+}
