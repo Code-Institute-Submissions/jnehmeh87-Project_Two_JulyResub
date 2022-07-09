@@ -387,7 +387,7 @@ let myQuestions = [
         correctAnswer: "a"
     },
     {
-        question: "assets/images/denmark.gif",
+        question: "assets/images/Denmark.gif",
         answers: {
             a: "Ghana",
             b: "Denmark",
@@ -405,7 +405,7 @@ let myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "assets/images/dominica.gif",
+        question: "assets/images/dominicia.gif",
         answers: {
             a: "Dominicia",
             b: "Bolivia",
@@ -711,7 +711,7 @@ let myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "assets/images/israel.gif",
+        question: "assets/images/Israel.gif",
         answers: {
             a: "Israel",
             b: "Moritania",
@@ -774,7 +774,7 @@ let myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "assets/images/kiribati.gif",
+        question: "assets/images/Kiribati.gif",
         answers: {
             a: "Kiribati",
             b: "Ethiopia",
@@ -810,7 +810,7 @@ let myQuestions = [
         correctAnswer: "c"
     },
     {
-        question: "assets/images/latvia.gif",
+        question: "assets/images/lativia.gif",
         answers: {
             a: "Lativia",
             b: "Myanmar",
@@ -936,7 +936,7 @@ let myQuestions = [
         correctAnswer: "a"
     },
     {
-        question: "assets/images/marshall-islands.gif",
+        question: "assets/images/marshall.gif",
         answers: {
             a: "San Marino",
             b: "Marshall",
@@ -1503,7 +1503,7 @@ let myQuestions = [
         correctAnswer: "b"
     },
     {
-        question: "assets/images/uganda.gif",
+        question: "assets/images/ughanda.gif",
         answers: {
             a: "Ughanda",
             b: "Grenada",
@@ -1521,7 +1521,7 @@ let myQuestions = [
         correctAnswer: "c"
     },
     {
-        question: "assets/images/ukraine.gif",
+        question: "assets/images/Ukraine.gif",
         answers: {
             a: "Ukraine",
             b: "Belgium",
@@ -1594,42 +1594,88 @@ let myQuestions = [
     }
 ];
 
-let imageDiv = document.getElementById('image');
-let aButton = document.getElementById('a')
-let bButton = document.getElementById('b')
-let cButton = document.getElementById('c')
-let index = 0;
-let count = 0;
+let quizContainer = document.getElementById('quiz');
+let resultsContainer = document.getElementById('results');
+let submitButton = document.getElementById('submit');
 
+function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
-for(let i = 0; i < myQuestions.length; i++) {
-    imageDiv.src = myQuestions[i].question;
-    aButton.value = myQuestions[i].answers.a;
-    bButton.value = myQuestions[i].answers.b;
-    cButton.value = myQuestions[i].answers.c;
+	function showQuestions(questions, quizContainer){
+		// we'll need a place to store the output and the answer choices
+        let output = [];
+        let answers;
+
+        // for each question...
+        for(let i=0; i<questions.length; i++){
+            
+            // first reset the list of answers
+            answers = [];
+
+            // for each available answer to this question...
+            for(letter in questions[i].answers){
+
+                // ...add an html radio button
+                answers.push(
+                    '<label>'
+                        + '<input type="radio" name="question' + i + '"value="'+letter+'">'
+                        + letter + ' : '
+                        + questions[i].answers[letter]
+                    + '</label>'
+                );
+            }
+
+            // add this question and its answers to the output
+            output.push(
+                '<div class="image-style">' + questions[i].question + '</div>'
+                + '<div class="answer-button">' + answers.join('') + '</div>'
+            );
+        }
+
+        // finally combine our output list into one string of html and put it on the page
+        quizContainer.innerHTML = output.join('');
+    }
+    
+
+	function showResults(questions, quizContainer, resultsContainer){
+		// gather answer containers from our quiz
+        let answerContainers = quizContainer.querySelectorAll('.answers');
+        
+        // keep track of user's answers
+        let userAnswer = '';
+        let numCorrect = 0;
+        
+        // for each question...
+        for(var i=0; i<questions.length; i++){
+
+            // find selected answer
+            userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+            
+            // if answer is correct
+            if(userAnswer===questions[i].correctAnswer){
+                // add to the number of correct answers
+                numCorrect++;
+                
+                // color the answers green
+                answerContainers[i].style.color = 'lightgreen';
+            }
+            // if answer is wrong or blank
+            else{
+                // color the answers red
+                answerContainers[i].style.color = 'red';
+            }
+        }
+
+        // show number of correct answers out of total
+        resultsContainer.innerHTML = numCorrect + ' out of ' + questions.length;
+	}
+
+	// show the questions
+	showQuestions(questions, quizContainer);
+
+	// when user clicks submit, show results
+	submitButton.onclick = function(){
+		showResults(questions, quizContainer, resultsContainer);
+	}
 }
 
-function changeButton1() {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
-}
-function changeButton2() {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
-}
-function changeButton3() {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
-}
+generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);

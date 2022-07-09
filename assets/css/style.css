@@ -220,12 +220,14 @@ h1, h2 {
     font-size: 18px;
     margin: 20px;
     padding: 8px;
-    width: 200px;
+    width: 500px;
     border: 1mm ridge rgba(165, 235, 144, 0.7);
     border-radius: 5px;
     font-family: 'Montserrat', sans-serif;
+    text-align: center;
     text-transform: uppercase;
     font-style: strong;
+    display: inline-flex;
 }
 
 .answer-button:hover {
