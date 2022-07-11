@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Guess The Flag</title>
 </head>
-<body>
+<body onload="promptName()">
     <header>
         <a href="index.html">
             <h1 id="logo">
@@ -19,9 +19,6 @@
         </a>
         <nav>
             <ul id="menu">
-                <li>
-                    <a href="scores.html">High Scores</a>
-                </li>
                 <li>
                     <a href="play.html" class="active">Play Me!</a>
                 </li>
@@ -33,20 +30,20 @@
     </header>
 
     <section id="play">
-        <h1><i class="fa-thin fa-flag"></i> Choose the correct answer:</h1>
+        <h1 id="demo">Choose the correct answer:</h1>
         <div id="quiz">
             <div>
                 <img src="" alt="Flag" id="image" class="image-style">
             </div>
             <div id="answer">
                 <div>
-                    <input type="button" value="aAnswer" id="a" class="answer-button" onclick="changeButton1()"></input>
+                    <input type="button" value="aAnswer" id="a" class="answer-button" onclick="checkAnswer('a')"></input>
                 </div>
                 <div>
-                    <input type="button" value="bAnswer" id="b" class="answer-button" onclick="changeButton2()"></input>
+                    <input type="button" value="bAnswer" id="b" class="answer-button" onclick="checkAnswer('b')"></input>
                 </div>
                 <div>
-                    <input type="button" value="cAnswer" id="c" class="answer-button" onclick="changeButton3()"></input>
+                    <input type="button" value="cAnswer" id="c" class="answer-button" onclick="checkAnswer('c')"></input>
                 </div>
             </div>
         </div>

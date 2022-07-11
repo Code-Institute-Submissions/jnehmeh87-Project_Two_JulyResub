@@ -1604,41 +1604,27 @@ let index = 0;
 let count = 0;
 let rightAnswer = 0;
 let wrongAnswer = 0;
+let highScore = 0;
+let playerName = "";
 
 imageDiv.src = myQuestions[0].question;
 aButton.value = myQuestions[0].answers.a;
 bButton.value = myQuestions[0].answers.b;
 cButton.value = myQuestions[0].answers.c;
 
-function changeButton1() {
-    correct = myQuestions[count].correctAnswer;
-    myAnswer = 'a';
-
-    if (myAnswer == correct) {
-        rightAnswer++;
-        win.textContent = rightAnswer;
+function promptName() {
+    let text;
+    let person = prompt("Please enter your name:", "Player");
+    if (person == null || person == "") {
+        person = 'Player';
     }
-    else {
-        wrongAnswer++;
-        loss.textContent = wrongAnswer;
-    }
-    count++;
-
-    if (count >= myQuestions.length){
-        //game over
-        console.log('Game over');
-    } else {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
-    }
+    playerName = person;
+    text = "Hello " + person + "! Guess the right answer";
+    document.getElementById("demo").innerHTML = text;
 }
-
-function changeButton2() {
+  
+function checkAnswer(myAnswer) {
     correct = myQuestions[count].correctAnswer;
-    myAnswer = 'b';
 
     if (myAnswer == correct) {
         rightAnswer++;
@@ -1652,33 +1638,9 @@ function changeButton2() {
 
     if (count >= myQuestions.length){
         //game over
-        console.log('Game over');
-    } else {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
-    }
-}
-function changeButton3() {
-    correct = myQuestions[count].correctAnswer;
-    myAnswer = 'c';
-
-    if (myAnswer == correct) {
-        rightAnswer++;
-        win.textContent = rightAnswer;
-    }
+        alert("Game Over! Thank you " + playerName + "for playing, You scored: " + rightAnswer);
+    } 
     else {
-        wrongAnswer++;
-        loss.textContent = wrongAnswer;
-    }
-    count++;
-
-    if (count >= myQuestions.length){
-        //game over
-        console.log('Game over');
-    } else {
     index = (index === myQuestions.length -1) ? 0 : index + 1;
     imageDiv.src = myQuestions[index].question;
     aButton.value = myQuestions[index].answers.a;

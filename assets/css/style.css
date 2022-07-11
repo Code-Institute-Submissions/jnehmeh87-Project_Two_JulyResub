@@ -86,15 +86,6 @@ h1, h2 {
     display: flex;
 }
 
-
-.rules-title {
-    font-size: 200%;
-    font-weight: bold;
-    padding-left: 8%;
-    padding-top: 15%;
-    text-align: center;
-}
-
 .rules-text {
     max-height: fit-content;
     max-width: fit-content;
@@ -272,3 +263,31 @@ footer {
     color: #3a3a3a;
 }
 
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    
+  }
+  
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+}
+  
+/* pad the top a bit with navbar is collapsed on mobile */
+@media (max-width:375px) {
+    #menu {
+
+    }
+    .answer-button{
+        display: block;
+    }
+    #rules-text {
+        display: block;
+        max-width: 100%;
+    }
+    #play-link {
+        display: block;
+    }
+}
