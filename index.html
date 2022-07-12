@@ -13,7 +13,7 @@
     <title>Guess The Flag</title>
 </head>
 <body>
-    <header>
+    <header class="navbar">
         <a href="index.html">
             <h1 id="logo">
                 Guess the flag
@@ -39,36 +39,31 @@
         <img src="assets/images/denmark.gif" alt="Denmark flag" class="flags">
         <img src="assets/images/belgium.gif" alt="Belgium flag" class="flags">
         <img src="assets/images/sweden.gif" alt="sweden flag" class="flags">
-        <img src="assets/images/uk.gif" alt="uk flag" class="flags">
-        <img src="assets/images/holy-see.gif" alt="holy-see flag" class="flags">
-        <img src="assets/images/thailand.gif" alt="thailand flag" class="flags">
-        <img src="assets/images/turkey.gif" alt="turkey flag" class="flags">
-        <img src="assets/images/dominica.gif" alt="Dominica flag" class="flags">
-        <img src="assets/images/saudi-arabia.gif" alt="saudi-arabia flag" class="flags">
+        <img src="assets/images/uk.gif" alt="uk flag" class="flags hidden">
+        <img src="assets/images/holy-see.gif" alt="holy-see flag" class="flags hidden">
+        <img src="assets/images/thailand.gif" alt="thailand flag" class="flags hidden">
+        <img src="assets/images/turkey.gif" alt="turkey flag" class="flags hidden">
+        <img src="assets/images/dominica.gif" alt="Dominica flag" class="flags hidden">
+        <img src="assets/images/saudi-arabia.gif" alt="saudi-arabia flag" class="flags hidden">
     </section>
 
     <section id="rules">
         <div class="rules-text">
-            <h1>How to play?</h1><br>
-            <p>This game is for you to challenge yourself and test your knowledge with flags.</p>
-            <p>How many flags can you guess in 60 seconds?</p>
-            <p>You have 60 seconds to guess</p>
-            <p>In the Hard mode you have 40 seconds to know as many flags as possible!</p>
-            <p>The rules are easy, all you have to do is:</p><br>
-            <ul>
-                <li>Enter your nickname</li>
-                <li>Choose the right answer from a list of 3.</li>
-                <li>You have 1 extra attempt in the Easy mode.</li>
-                <li>Answer as many as you can.</li>
-            </ul>
+            <h1>Guess the Flag</h1>
+            <p>Test your knowledge about flags and guess as many as possible!</p><br>
+            <h1>Game rules</h1>
+            <p>You will have an image of the flag and three choices under it.</p>
+            <p>Guess one of the choices.</p>
+            <p>If you guess right, you get one win point!</p>
+            <p>If you guess wrong, you get a losing point!</p>
+            <p>Play at your own pace!</p><br>
+            
+            <h1>Are you ready?</h1>
+            <form action="./play.html">
+                <button type="submit" class="play-link">Let's Go!</button>
+            </form>
         </div>
     </section>
-    <div id="play-link">
-        <h1>Are you ready to play?</h1>
-        <form action="./play.html">
-            <button type="submit" class="play-link">Let's Go!</button>
-        </form>
-    </div>
 
     <section id="flag-stripe">
         <img src="assets/images/andorra.gif" alt="Andorra flag" class="flags">
@@ -78,7 +73,7 @@
         <img src="assets/images/egypt.gif" alt="Egypt flag" class="flags">
         <img src="assets/images/finland.gif" alt="Finland flag" class="flags">
         <img src="assets/images/georgia.gif" alt="georgia flag" class="flags">
-        <img src="assets/images/hungary.gif" alt="hungary flag" class="flags">
+        <img src="assets/images/hungary.gif" alt="hungary flag" class="flags hidden">
         <img src="assets/images/switzerland.gif" alt="holy-see flag" class="flags hidden">
         <img src="assets/images/jamaica.gif" alt="jamaica flag" class="flags hidden">
         <img src="assets/images/india.gif" alt="india flag" class="flags hidden">
