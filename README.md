@@ -111,10 +111,16 @@ Tajawal and Montserrat from Google Fonts are used, with Sans Serif as fallback f
 ### Validation
 The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project. All pages of the final website passed validation without errors.
 
-W3C Markup Validator for index
-W3C Markup Validator for play
-W3C Jigsaw CSS Validator
-JSHint
+[W3C Markup Validator for index](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjnehmeh87.github.io%2FProject_Two%2Findex.html)
+
+[W3C Markup Validator for play](https://validator.w3.org/nu/?doc=https%3A%2F%2Fjnehmeh87.github.io%2FProject_Two%2Fplay.html)
+
+[W3C Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fjnehmeh87.github.io%2FProject_Two%2Fassets%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+
+JSHint 
+![Jshint](assets/images/jshint.png)
+
+I tested it on for responsiveness on mobile and desktop and found no issues.
 
 ### Bugs
 * The flag stripe had an ID duplicated on the top and bottom level, I switched them to a class instead and fixed that in the css
