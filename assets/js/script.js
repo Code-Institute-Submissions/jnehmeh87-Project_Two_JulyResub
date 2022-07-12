@@ -1,5 +1,7 @@
-let myQuestions = [
-    {
+/*jshint esversion: 6 */
+
+// Array of object that contains questions, answers and correct answer
+let myQuestions = [{
         question: "assets/images/afghanistan.gif",
         answers: {
             a: "Afghanistan",
@@ -241,7 +243,7 @@ let myQuestions = [
             c: "Burundi"
         },
         correctAnswer: "c"
-    },    
+    },
     {
         question: "assets/images/cabo-verde.gif",
         answers: {
@@ -484,7 +486,7 @@ let myQuestions = [
             c: "Eritrea"
         },
         correctAnswer: "c"
-    },   
+    },
     {
         question: "assets/images/estonia.gif",
         answers: {
@@ -727,7 +729,7 @@ let myQuestions = [
             c: "Italy"
         },
         correctAnswer: "c"
-    },    
+    },
     {
         question: "assets/images/jamaica.gif",
         answers: {
@@ -970,7 +972,7 @@ let myQuestions = [
             c: "Mexico"
         },
         correctAnswer: "c"
-    }, 
+    },
     {
         question: "assets/images/micronesia.gif",
         answers: {
@@ -1213,7 +1215,7 @@ let myQuestions = [
             c: "Portugal"
         },
         correctAnswer: "c"
-    },    
+    },
     {
         question: "assets/images/qatar.gif",
         answers: {
@@ -1456,7 +1458,7 @@ let myQuestions = [
             c: "Togo"
         },
         correctAnswer: "c"
-    },   
+    },
     {
         question: "assets/images/tonga.gif",
         answers: {
@@ -1594,6 +1596,7 @@ let myQuestions = [
     }
 ];
 
+// Calling the elements from play.html, index and count for scoring
 let imageDiv = document.getElementById('image');
 let aButton = document.getElementById('a');
 let bButton = document.getElementById('b');
@@ -1604,47 +1607,52 @@ let index = 0;
 let count = 0;
 let rightAnswer = 0;
 let wrongAnswer = 0;
-let highScore = 0;
 let playerName = "";
 
+// Display the flag and chouces first
 imageDiv.src = myQuestions[0].question;
 aButton.value = myQuestions[0].answers.a;
 bButton.value = myQuestions[0].answers.b;
 cButton.value = myQuestions[0].answers.c;
 
+// Prompt message asking the name of the user
 function promptName() {
     let text;
     let person = prompt("Please enter your name:", "Player");
     if (person == null || person == "") {
         person = 'Player';
     }
+    // After entering the name, it will be used in a welcoming message as the user play
     playerName = person;
     text = "Hello " + person + "! Guess the right answer";
     document.getElementById("demo").innerHTML = text;
 }
-  
+
+// Checking the answer
 function checkAnswer(myAnswer) {
-    correct = myQuestions[count].correctAnswer;
+    // Set the correct displayed answer to the object in myQuestion
+    let correct = myQuestions[count].correctAnswer;
 
     if (myAnswer == correct) {
+        // If correct, the player gets a winning point
         rightAnswer++;
         win.textContent = rightAnswer;
-    }
-    else {
+    } else {
+        // If wrong, the player gets a losing point
         wrongAnswer++;
         loss.textContent = wrongAnswer;
     }
     count++;
 
-    if (count >= myQuestions.length){
-        //game over
+    if (count >= myQuestions.length) {
+        // When all flags are finished, and alert will thank the player and tell them their winning score
         alert("Game Over! Thank you " + playerName + "for playing, You scored: " + rightAnswer);
-    } 
-    else {
-    index = (index === myQuestions.length -1) ? 0 : index + 1;
-    imageDiv.src = myQuestions[index].question;
-    aButton.value = myQuestions[index].answers.a;
-    bButton.value = myQuestions[index].answers.b;
-    cButton.value = myQuestions[index].answers.c;
+    } else {
+        // calling for a new object or flag and answers
+        index = (index === myQuestions.length - 1) ? 0 : index + 1;
+        imageDiv.src = myQuestions[index].question;
+        aButton.value = myQuestions[index].answers.a;
+        bButton.value = myQuestions[index].answers.b;
+        cButton.value = myQuestions[index].answers.c;
     }
 }

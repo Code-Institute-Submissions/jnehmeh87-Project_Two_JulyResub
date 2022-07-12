@@ -10,52 +10,78 @@ The live website can be found [here](https://jnehmeh87.github.io/Project_Two/)
 
 ![Website Mock Up](assets/images/mock-website.png)
 
+The wireframe can be found [here](assets/images/wireframe.jpg)
+
 *** 
 ## User Experience (UX)
+The user can read the Game rules, start the game with a button linking to the play page. A variety of flags is represented in a rectangular box. The player will be asked to enter their name to make it a personal experience. Three buttons are the choices provided with each flag and by choosing write or wrong, the score box shows the result. Either winning more or losing more. By the end of the dictionnary of flags, another alert will Thank the user for playing, showing their winning score.
 
 ### User stories
+* As a user, I want to be able to read the rules of the game
+* As a user, I want to be able to play the game, knowing the results continuously
+* As a user, I want to be able to play the game with my own name
 
 #### First Time Visitor Goals
-* 
-* 
-* 
+* Have a clear idea about the game
+* having a link taking the user directly to the game
+* The user will be challenged with their knowledge of flags
 
 #### Returning Visitor Goals
-* 
+* The user haven't guessed all flags, and they want to test their knowledge again
+
 #### Frequent Visitor Goals
-* 
+* It will be their gret way to memories all flags
 
 ### Design
 
 #### Color Scheme
-The Index page contains a start image sided with a circle with some convincing infortiom about the course. The color scheme consists of 2 colors rgba(34, 26, 107, 0.856) and rgba(153, 144, 235, 0.7).
+The Index page contains the game rules in a box with a button linking to the game page. One box that shows the flag and three to show the choices and the score is in the bottom of the page before the footer. The last is in all pages . The color scheme consists of 2 colors rgb(76, 145, 55) and rgba(165, 235, 144, 0.7).
 
 #### Imagery
-	
+Iamges are uploaded to the repositary and can be found in the images folder in assets.
 
 #### Typography
 Tajawal and Montserrat from Google Fonts are used, with Sans Serif as fallback font.
 
 #### Differences to Design
-* The High Scores button on index page send us to the scores page to check players Highest scores. 
-* Icons from font awesome were added to the footer, form and time section, this displayed more visually pleasing, while maintaining the visual cue for expected form contents.
-* Header was split in 2 rows for mobile devices to keep visual integrity and readibility of header and navbar.
+* The High Scores button on index page is removed
+* I decided to remove the the High score page
 
 ### Structure 
-* 
-
-No submenues are used and the navbar indicates to the user where they are at all times. THe Home page and courses page has direct links to the call to action - i.e. the book page.
+* No submenues are used and the navbar indicates to the user where they are at all times. THe Home page and Play page has direct links to the call to action - i.e. the play page.
 
 ### Wireframes
 
 
 ## Features
-* Internal links (within sheet and between sheets) - both in nav bar and on the sheets
-* External links (social media)
-* Images
+* The user Find the game rules on the first page
+
+![Start of the program](assets/images/00-rules.png)
+
+* Internal links (within pages and between pages) - both in nav bar and on the pages. Let's go button take us to the play page
+
+![Start of the program](assets/images/01-play-button.png)
+![Start of the program](assets/images/01b-menu.png)
+
+* Onload of the play game a prompt ask the user to enter their name, then a welcome message shows on the top of the page
+
+![Start of the program](assets/images/02-prompt.png)
+![Start of the program](assets/images/03-welcome-msg.png)
+
+* Then we can see the box where the flag changes with every choice of the use
+
+![Start of the program](assets/images/05-flags.png)
+![Start of the program](assets/images/04-choices.png)
+
+* Every time the user choose a name of the flag, then a point will be added to his win or loss
+
+![Start of the program](assets/images/06-scores.png)
+
 
 ### Future features
-* More challenges and different games
+* More flags can be added
+* High score page
+* Creating sections with different quiz and flags, other than countries
 
 ## Technologies
 ### Languages used
@@ -63,6 +89,8 @@ No submenues are used and the navbar indicates to the user where they are at all
 	* This project uses HTML5 as the main language for content and structure of the Website.
 * CSS3
 	* This project uses CSS3 for Website styling
+* Javascript
+	* This project uses Javascript to create dynamic and interactive web content
 
 ### Frameworks, Libraries & Programs used
 * [Font Awesome](https://fontawesome.com/)
@@ -81,10 +109,15 @@ No submenues are used and the navbar indicates to the user where they are at all
 ## Testing
 
 ### Validation
+The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project. All pages of the final website passed validation without errors.
 
+W3C Markup Validator for index
+W3C Markup Validator for play
+W3C Jigsaw CSS Validator
+JSHint
 
 ### Bugs
-* 
+* The flag stripe had an ID duplicated on the top and bottom level, I switched them to a class instead and fixed that in the css
 
 ## Deployment
 ### GitHub Pages

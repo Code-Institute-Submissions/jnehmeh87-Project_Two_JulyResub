@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,8 +11,10 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Guess The Flag</title>
 </head>
+<!-- A prompt a message onload, welcoming the user and asking for their name -->
 <body onload="promptName()">
     <header>
+        <!-- Navbar -->
         <a href="index.html">
             <h1 id="logo">
                 Guess the flag
@@ -28,51 +31,43 @@
             </ul>
         </nav>
     </header>
-
+    <!-- The Game area -->
     <section id="play">
+        <!-- After entering the name, the welcoming message will appear here -->
         <h1 id="demo"></h1>
         <div id="quiz">
+            <!-- The flag box -->
             <div>
-                <img src="" alt="Flag" id="image" class="image-style">
+                <img src="assets/images/afghanistan.gif" alt="Flag" id="image" class="image-style">
             </div>
+            <!-- Answer button, that changes the flag and add to win or loss points -->
             <div id="answer">
                 <div>
-                    <input type="button" value="aAnswer" id="a" class="answer-button" onclick="checkAnswer('a')"></input>
+                    <input type="button" value="aAnswer" id="a" class="answer-button"
+                        onclick="checkAnswer('a')">
                 </div>
                 <div>
-                    <input type="button" value="bAnswer" id="b" class="answer-button" onclick="checkAnswer('b')"></input>
+                    <input type="button" value="bAnswer" id="b" class="answer-button"
+                        onclick="checkAnswer('b')">
                 </div>
                 <div>
-                    <input type="button" value="cAnswer" id="c" class="answer-button" onclick="checkAnswer('c')"></input>
+                    <input type="button" value="cAnswer" id="c" class="answer-button"
+                        onclick="checkAnswer('c')">
                 </div>
             </div>
         </div>
         <div id="score">
+            <!-- Give a win point on a correct answer -->
             <div id="win-label" class="badge">Win</div>
+            <!-- Give a loss point on a wrong answer -->
             <div id="loss-label" class="badge">Loss</div>
             <span id="win-score">0</span> | <span id="loss-score">0</span>
         </div>
-    </section>    
-
-    <footer>
-        <ul class="social-networks">
-            <li>
-                <a href="https://facebook.com/jnehmeh" target="_blank" rel="noopener" aria-label="Visit our Facebook page (Opens in a new tab)"><i class="fab fa-facebook"></i></a>
-            </li>
-            <li>
-                <a href="https://linkedin.com/in/jnehmeh" target="_blank" rel="noopener" aria-label="Visit our linkedin page (Opens in a new tab)"><i class="fab fa-linkedin"></i> </a>
-            </li>
-            <li>
-                <a href="https://www.youtube.com/c/JadNehmeh" target="_blank" rel="noopener" aria-label="Visit our Youtube page (Opens in a new tab)"><i class="fab fa-youtube-square"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com/jnehmeh87" target="_blank" rel="noopener" aria-label="Visit our Instagram page (Opens in a new tab)"><i class="fab fa-instagram"></i></a>
-            </li>
-        </ul>
-    </footer>
+    </section>
 
     <!-- font awesome script -->
     <script src="https://kit.fontawesome.com/4a37176526.js" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
+
 </html>
