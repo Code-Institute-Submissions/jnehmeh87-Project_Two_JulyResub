@@ -1,13 +1,14 @@
-# Portfolio Project 2 - Fruits Knowledge
+# Portfolio Project 2 - Guess The Flag
 ## Purpose
+For people who love flags, inspired by "Big bang theory" series, this is a simple quiz to test the knowledge in flags.
 
-
+This Website was created for the purpose of completing the Project 2 for the Code Institute's Full Stack Developer course and is entirely fictional. The project covers HTML, CSS and Javascript with a user centric approach in mind. A full list of technologies used can be found in the technologies section of this document.
 
 The live website can be found [here](https://jnehmeh87.github.io/Project_Two/)
 
-## Fruits Knowledge Responsive Website
+## Guess The Flag Responsive Website
 
-![Website Mock Up](assets/)
+![Website Mock Up](assets/images/mock-website.png)
 
 *** 
 ## User Experience (UX)
